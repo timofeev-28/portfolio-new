@@ -1,0 +1,211 @@
+.navigation {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  padding-block: 20px;
+  padding-inline: 30px;
+  width: 70%;
+  min-height: 70vh;
+  background: $green-to-green;
+  background-color: #0d5837;
+  border-bottom-left-radius: 10px;
+  visibility: hidden;
+  transform: translateX(115%);
+  overflow-y: auto;
+  transition: visibility $trans-400, transform $trans-400;
+
+  &--active {
+    visibility: visible;
+    transform: none;
+    transition: visibility $trans-400, transform $trans-400;
+  }
+
+  @include vp-768 {
+    width: 35%;
+  }
+
+  @include vp-1024 {
+    position: relative;
+    flex-direction: initial;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 35px;
+    row-gap: 10px;
+    padding-block: 0;
+    padding-inline: 0;
+    width: auto;
+    min-height: auto;
+    background: transparent;
+    background-color: transparent;
+    border-bottom-left-radius: initial;
+    visibility: visible;
+    overflow-y: initial;
+    transform: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin-block: 0;
+    padding-left: 0;
+    list-style: none;
+
+    @include vp-1024 {
+      flex-direction: initial;
+      align-items: center;
+      column-gap: 35px;
+      row-gap: 10px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    // точка рядом с названием открытой страницы
+    &--current::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: -10px;
+      transform: translateY(-50%);
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: $color-mark;
+    }
+  }
+}
+
+.navigation__link {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  font-size: 26px;
+  transition: color $trans-default, outline $trans-default;
+
+  @include vp-1024 {
+    display: block;
+    width: auto;
+    font-size: 20px;
+  }
+
+  // полоска под ссылкой при ховере
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $color-accent;
+    transform: scale(0);
+    transition: transform $trans-200, background-color $trans-200;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-accent;
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+
+  @include hover {
+    color: $color-accent;
+
+    &::after {
+      transform: scale(1);
+    }
+  }
+
+  &:active {
+    color: $color-active;
+
+    &::after {
+      background-color: $color-active;
+    }
+  }
+}
+
+.navigation__link--gh {
+  width: 76px;
+  height: 33px;
+  transform: translateY(2px);
+
+  @include vp-1024 {
+    width: 68px;
+    height: 25px;
+    transform: translateY(-2px);
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 76px;
+    height: 33px;
+    background-color: $color-main;
+    mask: url("../../img/stack-sprite.svg#github") no-repeat center / 76px 33px;
+    transition: background-color $trans-200;
+
+    @include vp-1024 {
+      width: 68px;
+      height: 25px;
+      mask-size: 68px 25px;
+    }
+  }
+
+  @include hover {
+    &::before {
+      background-color: $color-accent;
+    }
+  }
+
+  &:active::before {
+    background-color: $color-active;
+  }
+}
+
+// выпадашка из навигации
+.navigation__link--js.js-active {
+  @include vp-1024 {
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    color: $color-accent;
+    background: $green-to-green;
+    background-color: #0d5837;
+  }
+}
+
+.navigation__link--works {
+  color: #e4d298;
+}
+
+.navigation__list-works {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+  padding-block: 10px;
+  padding-inline: 5px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background: $green-to-green;
+  background-color: #0d5837;
+}
+
+.navigation__item-works:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.navigation__list-works.js-active {
+  display: block;
+}

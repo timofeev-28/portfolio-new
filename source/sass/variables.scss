@@ -1,0 +1,62 @@
+// Colors
+// ---------------------------------
+
+// Default
+
+$color-black:                       #000000;
+$color-white:                       #ffffff;
+$color-transparent:  rgba(255, 255, 255, 0);
+
+// Project palette
+
+$color-main:                        #fcf3f3;
+$color-second-text:                 #ece8db;
+$color-bgc:                         #0c472c;
+$color-accent:                      #4cfd3c;
+$color-active:                      #18aa1f;
+$color-border:                      #6aaa04;
+$color-bgc-text:                    #10643e;
+$color-mark:                        #be5b0a;
+$color-social:                      #62bdfd;
+$color-selected:                    #ffd900;
+$color-bgc-cells:                   #209c73;
+$color-cells-outline:               #35e2a9;
+$color-number-text:                 #ffd700;
+$color-number-accent:               #ffae00;
+$color-number-border:               #af4d14;
+
+// Gradient
+
+$black-to-right:                    linear-gradient(91.44deg, #b8f809 8.52%, #42ff66 51.5%, #62bdfd 91.88%);
+
+$green-to-green:                    linear-gradient(to right, #0d5536, #0e7046);
+
+// Typography
+// ---------------------------------
+
+$ff-main-font:   "Noto-sans", system-ui, sans-serif;
+$ff-accent-font: "Noto-sans", system-ui, sans-serif;
+$ff-italic-font: "Noto-sans", system-ui, sans-serif;
+
+$fz-default:                        25px;
+
+// Animation
+// ---------------------------------
+
+$tf-default:                        ease-in-out;
+$trans-default:                     0.25s $tf-default;
+$trans-400:                         0.4s $tf-default;
+$trans-200:                         0.2s $tf-default;
+
+// если требуется изинг отличный от $tf-default, то переменную называем не цифрой
+$trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+$trans-600:                         0.6s $tf-default;
+
+// Viewports
+// ---------------------------------
+
+$vp-540:                            540px;
+$vp-768:                            768px;
+$vp-1024:                           1024px;
+$vp-1280:                           1280px;

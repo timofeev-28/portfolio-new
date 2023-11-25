@@ -1,0 +1,70 @@
+@mixin hover {
+  @media (hover: hover) {
+    &:hover:not(.focus-visible):not(:disabled) {
+      @content;
+    }
+  }
+}
+
+@mixin focus {
+  &.focus-visible:focus:not(:disabled) {
+    @content;
+  }
+}
+
+@mixin focus-within {
+  &:focus-within {
+    @content;
+  }
+}
+
+@mixin active {
+  &:active:not(.focus-visible):not(:disabled) {
+    @content;
+  }
+}
+
+@mixin hover-focus {
+  @media (hover: hover) {
+    &:hover:not(.focus-visible):not(:disabled) {
+      @content;
+    }
+  }
+
+  &.focus-visible:focus:not(:disabled) {
+    @content;
+  }
+}
+
+@mixin disabled {
+  &:disabled,
+  &.button-disabled {
+    @content;
+  }
+}
+
+// Mobile first
+
+@mixin vp-540 {
+  @media (min-width: $vp-540) {
+    @content;
+  }
+}
+
+@mixin vp-768 {
+  @media (min-width: $vp-768) {
+    @content;
+  }
+}
+
+@mixin vp-1024 {
+  @media (min-width: $vp-1024) {
+    @content;
+  }
+}
+
+@mixin vp-1280 {
+  @media (min-width: $vp-1280) {
+    @content;
+  }
+}

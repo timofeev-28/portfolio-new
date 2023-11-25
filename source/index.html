@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Портфолио html-верстальщика">
+    <title>Портфолио Тимофеев ДН - главная страница</title>
+    <link rel="stylesheet" href="./libs/graph-modal.min.css"/>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="./fonts/notosans-lightitalic.woff2" type="font/woff2" as="font" crossorigin>
+    <link rel="preload" href="./fonts/notosans-regular.woff2" type="font/woff2" as="font" crossorigin>
+    <link rel="preload" href="./fonts/notosans-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="icon" href="./favicon.ico" sizes="any">
+    <link rel="icon" href="./favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./favicons/apple-touch-icon.png">
+    <link rel="manifest" href="./manifest.webmanifest">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header" id="header">
+        <div class="header__container container">
+          <a class="header__logo-link logo" href="./" aria-current="page">
+            <picture>
+              <source type="image/webp" srcset="./img/logo-mobile@1x.webp 1x, ./img/logo-mobile@2x.webp 2x">
+              <img class="logo__img" src="./img/logo-mobile@1x.png" srcset="./img/logo-mobile@2x.png 2x" width="365" height="36" alt="Логотип - слово Портфолио">
+            </picture>
+          </a>
+          <nav class="navigation">
+            <ul class="navigation__list list-reset">
+              <li class="navigation__item navigation__item--current">
+                <a class="navigation__link navigation-js" href="./">Обо мне</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation-js" href="./works-js.html">Разное на JS</a>
+              </li>
+            </ul>
+            <ul class="navigation__list list-reset">
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--js" href="javascript:undefined">Мои работы</a>
+                <ul class="navigation__list-works list-reset">
+                  <li class="navigation__item-works">
+                    <a class="navigation__link navigation-js navigation__link--works" href="https://supergym.timofeev-28.ru" target="_blank">Supergym</a>
+                  </li>
+                  <li class="navigation__item-works">
+                    <a class="navigation__link navigation-js navigation__link--works" href="https://mishka.timofeev-28.ru" target="_blank">Mishka</a>
+                  </li>
+                  <li class="navigation__item-works">
+                    <a class="navigation__link navigation-js navigation__link--works" href="https://blanchard.timofeev-28.ru" target="_blank">Blanchard</a>
+                  </li>
+                  <li class="navigation__item-works">
+                    <a class="navigation__link navigation-js navigation__link--works" href="https://drink2go.timofeev-28.ru" target="_blank">Drink2Go</a>
+                  </li>
+                  <li class="navigation__item-works">
+                    <a class="navigation__link navigation-js navigation__link--works" href="https://evclid.timofeev-28.ru" target="_blank">Evclid</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation-js navigation__link--gh" href="https://github.com/timofeev-28/portfolio-new" target="_blank" aria-label="Мой профиль на Гитхабе"></a>
+              </li>
+            </ul>
+          </nav>
+          <button class="burger" type="button" aria-label="Открыть меню сайта">
+            <span class="burger__line"></span>
+          </button>
+        </div>
+      </header>
+
+      <main>
+
+      </main>
+      <footer>
+        <div class="container"></div>
+      </footer>
+    </div>
+
+    <!-- Модалки -->
+    <!-- <div class="modal modal--preload" data-modal="feedback">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <p class="modal__description">Обычная модалка</p>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div> -->
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

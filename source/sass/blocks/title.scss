@@ -1,0 +1,16 @@
+.title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: $ff-accent-font;
+  font-size: 30px;
+  font-weight: 500;
+  color: $color-main;
+
+  @include vp-768 {
+    font-size: 46px;
+  }
+
+  @include vp-1280 {
+    font-size: 60px;
+  }
+}

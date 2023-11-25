@@ -1,0 +1,12 @@
+.container {
+  margin-inline: 15px;
+
+  @include vp-768 {
+    margin-inline: 30px;
+  }
+
+  @include vp-1280 {
+    margin-inline: auto;
+    max-width: 1220px;
+  }
+}

@@ -107,12 +107,10 @@
     transition: transform $trans-200, background-color $trans-200;
   }
 
-  &:focus {
-    outline: none;
-  }
+  @include not-outline;
 
-  &:focus-visible {
-    outline: 1px solid $color-accent;
+  @include focus {
+    outline: 2px solid $color-accent;
     outline-offset: 3px;
     border-radius: 1px;
   }
@@ -125,7 +123,7 @@
     }
   }
 
-  &:active {
+  @include active {
     color: $color-active;
 
     &::after {
@@ -167,13 +165,15 @@
     }
   }
 
-  &:active::before {
-    background-color: $color-active;
+  @include active {
+    &::before {
+      background-color: $color-active;
+    }
   }
 }
 
 // выпадашка из навигации
-.navigation__link--js.js-active {
+[data-dropdown="link-nav"].is-active {
   @include vp-1024 {
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
@@ -183,7 +183,7 @@
   }
 }
 
-.navigation__link--works {
+[data-dropdown="dropdown-link"] {
   color: #e4d298;
 }
 
@@ -194,8 +194,10 @@
   left: 0;
   z-index: 1;
   display: none;
+  margin-block: 0;
   padding-block: 10px;
   padding-inline: 5px;
+  list-style: none;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
   background: $green-to-green;
@@ -206,6 +208,6 @@
   margin-bottom: 8px;
 }
 
-.navigation__list-works.js-active {
+.navigation__list-works.is-active {
   display: block;
 }

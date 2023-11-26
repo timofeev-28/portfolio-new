@@ -1,0 +1,11 @@
+.intro li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.intro a {
+  transition: color $trans-default;
+
+  @include hover {
+    color: $color-accent;
+  }
+}

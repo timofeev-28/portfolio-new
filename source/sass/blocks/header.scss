@@ -16,4 +16,13 @@
 
 .header__logo-link {
   margin-right: 25px;
+  transition: outline $trans-default;
+
+  @include not-outline;
+
+  @include focus {
+    outline: 2px solid $color-accent;
+    outline-offset: 4px;
+    border-radius: 1px;
+  }
 }

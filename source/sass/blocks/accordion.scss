@@ -1,0 +1,126 @@
+.accordion {
+  margin-block: 0;
+  padding-left: 0;
+  list-style: none;
+
+  @include vp-768 {
+    width: 75%;
+  }
+
+  @include vp-1280 {
+    width: 70%;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__btn {
+    position: relative;
+    display: block;
+    padding-block: 20px;
+    padding-right: 0;
+    padding-left: 0;
+    border-right: none;
+    border-left: none;
+    border-top: 1px solid $color-bgc-text;
+    border-bottom: 1px solid $color-bgc-text;
+    width: 100%;
+    font-family: $ff-main-font;
+    font-weight: 400;
+    font-size: 21px;
+    text-align: left;
+    cursor: pointer;
+    color: $color-second-text;
+    background-color: $color-transparent;
+    transition: color $trans-default, border-color $trans-default, outline $trans-default;
+
+    @include vp-768 {
+      font-size: 25px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $color-second-text;
+      mask: url("../../img/stack-sprite.svg#arrow") no-repeat center / 50px 50px;
+      transform: translateY(-50%) rotate(-180deg);
+      transition: transform 0.5s ease-in-out, background-color $trans-default;
+    }
+
+    @include not-outline;
+
+    @include focus {
+      border-radius: 1px;
+      outline: 2px solid $color-accent;
+      outline-offset: 3px;
+    }
+
+    @include hover {
+      color: $color-accent;
+      border-color: $color-accent;
+
+      &::after {
+        background-color: $color-accent;
+      }
+    }
+
+    @include active {
+      color: $color-active;
+      border-color: $color-active;
+    }
+  }
+
+  &__descr {
+    overflow: hidden;
+  }
+
+  &__list-text {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  &__item-text {
+    position: relative;
+    margin-block: 0;
+    padding-left: 12px;
+    font-size: 19px;
+    list-style: none;
+    color: $color-second-text;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 0;
+      border-radius: 50%;
+      width: 5px;
+      height: 5px;
+      background-color: $color-social;
+    }
+  }
+
+  &__item-text:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &__span {
+    font-size: 10px;
+  }
+}
+
+// для сохранения выделенного цвета при открытии пункта аккордеона
+.accordion__item.is-active .accordion__btn {
+  color: $color-active;
+  border-color: $color-active;
+}
+
+.accordion__item.is-active .accordion__btn::after {
+  background-color: $color-active;
+  transform: translateY(-50%) rotate(0);
+}

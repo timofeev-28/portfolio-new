@@ -2,6 +2,7 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "vendor/data-accordion";
 // Swiper 8.4.7
 // @import "vendor/swiper";
 
@@ -18,11 +19,16 @@
 // Blocks
 // ---------------------------------
 
+@import "blocks/intro";
 @import "blocks/modal";
 @import "blocks/header";
 @import "blocks/navigation";
 @import "blocks/title";
 @import "blocks/burger";
+@import "blocks/hero";
+@import "blocks/social";
+@import "blocks/about";
+@import "blocks/accordion";
 
 // ---------------------------------
 

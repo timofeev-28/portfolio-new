@@ -1,5 +1,7 @@
-import {iosVhFix} from './utils/ios-vh-fix';
 // import {initModals} from './modules/modals/init-modals';
+import {iosVhFix} from './utils/ios-vh-fix';
+import {initBurger} from './modules/init/init-burger';
+import {initDropdown} from './modules/init/init-dropdown';
 
 // ---------------------------------
 
@@ -17,6 +19,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     // initModals();
+    initBurger();
+    initDropdown();
   });
 });
 

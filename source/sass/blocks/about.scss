@@ -1,0 +1,48 @@
+.about {
+  padding-block: 25px;
+  border-bottom: 1px solid $color-border;
+
+  &__container {
+    position: relative;
+
+    @include vp-1024 {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 17px;
+        right: 0;
+        padding: 7px;
+        width: 200px;
+        height: 300px;
+        border-radius: 7px;
+        background: url("../../img/about-image@2x.jpg") no-repeat center / 186px 286px;
+        box-shadow: 0 0 3px 2px $color-bgc-text;
+      }
+    }
+
+    @include vp-1280 {
+      &::before {
+        content: "";
+        top: 17px;
+        right: 28px;
+      }
+    }
+  }
+
+  @include vp-768 {
+    padding-block: 35px;
+  }
+
+  @include vp-1024 {
+    padding-block: 40px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__image {
+    display: block;
+    border-radius: 7px;
+  }
+}

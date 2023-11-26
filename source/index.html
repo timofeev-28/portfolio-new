@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Портфолио html-верстальщика">
     <title>Портфолио Тимофеев ДН - главная страница</title>
-    <link rel="stylesheet" href="./libs/graph-modal.min.css"/>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="./fonts/notosans-lightitalic.woff2" type="font/woff2" as="font" crossorigin>
     <link rel="preload" href="./fonts/notosans-regular.woff2" type="font/woff2" as="font" crossorigin>
@@ -20,55 +19,134 @@
     <div class="wrapper">
       <header class="header" id="header">
         <div class="header__container container">
-          <a class="header__logo-link logo" href="./" aria-current="page">
+          <a class="header__logo-link logo" href="./index.html" aria-current="page">
             <picture>
               <source type="image/webp" srcset="./img/logo-mobile@1x.webp 1x, ./img/logo-mobile@2x.webp 2x">
               <img class="logo__img" src="./img/logo-mobile@1x.png" srcset="./img/logo-mobile@2x.png 2x" width="365" height="36" alt="Логотип - слово Портфолио">
             </picture>
           </a>
-          <nav class="navigation">
+          <nav class="navigation" data-burger="nav">
             <ul class="navigation__list list-reset">
               <li class="navigation__item navigation__item--current">
-                <a class="navigation__link navigation-js" href="./">Обо мне</a>
+                <a class="navigation__link navigation-js" href="index.html" data-burger="nav-js">Обо мне</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link navigation-js" href="./works-js.html">Разное на JS</a>
+                <a class="navigation__link" href="./works-js.html" data-burger="nav-js">Разное на JS</a>
               </li>
             </ul>
             <ul class="navigation__list list-reset">
               <li class="navigation__item">
-                <a class="navigation__link navigation__link--js" href="javascript:undefined">Мои работы</a>
-                <ul class="navigation__list-works list-reset">
+                <a class="navigation__link" href="javascript:undefined" data-dropdown="link-nav">Мои работы</a>
+                <ul class="navigation__list-works" data-dropdown="dropdown">
                   <li class="navigation__item-works">
-                    <a class="navigation__link navigation-js navigation__link--works" href="https://supergym.timofeev-28.ru" target="_blank">Supergym</a>
+                    <a class="navigation__link navigation-js navigation__link--works" href="https://supergym.timofeev-28.ru" target="_blank" data-dropdown="dropdown-link">Supergym</a>
                   </li>
                   <li class="navigation__item-works">
-                    <a class="navigation__link navigation-js navigation__link--works" href="https://mishka.timofeev-28.ru" target="_blank">Mishka</a>
+                    <a class="navigation__link navigation-js navigation__link--works" href="https://mishka.timofeev-28.ru" target="_blank" data-dropdown="dropdown-link">Mishka</a>
                   </li>
                   <li class="navigation__item-works">
-                    <a class="navigation__link navigation-js navigation__link--works" href="https://blanchard.timofeev-28.ru" target="_blank">Blanchard</a>
+                    <a class="navigation__link navigation-js navigation__link--works" href="https://blanchard.timofeev-28.ru" target="_blank" data-dropdown="dropdown-link">Blanchard</a>
                   </li>
                   <li class="navigation__item-works">
-                    <a class="navigation__link navigation-js navigation__link--works" href="https://drink2go.timofeev-28.ru" target="_blank">Drink2Go</a>
+                    <a class="navigation__link navigation-js navigation__link--works" href="https://drink2go.timofeev-28.ru" target="_blank" data-dropdown="dropdown-link">Drink2Go</a>
                   </li>
                   <li class="navigation__item-works">
-                    <a class="navigation__link navigation-js navigation__link--works" href="https://evclid.timofeev-28.ru" target="_blank">Evclid</a>
+                    <a class="navigation__link navigation-js navigation__link--works" href="https://evclid.timofeev-28.ru" target="_blank" data-dropdown="dropdown-link">Evclid</a>
                   </li>
                 </ul>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link navigation-js navigation__link--gh" href="https://github.com/timofeev-28/portfolio-new" target="_blank" aria-label="Мой профиль на Гитхабе"></a>
+                <a class="navigation__link navigation-js navigation__link--gh" href="https://github.com/timofeev-28/portfolio-new" target="_blank" aria-label="Мой профиль на Гитхабе" data-burger="nav-js"></a>
               </li>
             </ul>
           </nav>
-          <button class="burger" type="button" aria-label="Открыть меню сайта">
+          <button class="burger" type="button" aria-label="Открыть меню сайта" data-burger="burger">
             <span class="burger__line"></span>
           </button>
         </div>
       </header>
 
       <main>
+        <h1 class="visually-hidden">HTML-Верстальщик</h1>
+        <section class="hero">
+          <div class="hero__container container">
+            <h2 class="visually-hidden">Немного обо мне</h2>
+            <h3 class="hero__title title">
+              <span class="hero__subtitle">Привет, меня зовут Дмитрий</span>
+              Верстальщик, будущий фронтенд-разработчик
+            </h3>
+            <div class="hero__image-wrapper">
+              <picture>
+                <source type="image/webp" media="(min-width: 1024px)" srcset="./img/dn-desktop@1x.webp 1x, ./img/dn-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/dn-tablet@1x.webp 1x, ./img/dn-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="./img/dn-mobile@1x.webp 1x, ./img/dn-mobile@2x.webp 2x">
+                <source type="image/jpg" media="(min-width: 1024px)" srcset="./img/dn-desktop@1x.jpg 1x, ./img/dn-desktop@2x.jpg 2x">
+                <source type="image/jpg" media="(min-width: 768px)" srcset="./img/dn-tablet@1x.jpg 1x, ./img/dn-tablet@2x.jpg 2x">
+                <img class="hero__image" src="./img/dn-mobile@1x.jpg" srcset="./img/dn-mobile@2x.jpg 2x" width="140" height="140" alt="Верстальщик из Санкт-Петербурга Дмитрий Тимофеев">
+              </picture>
+            </div>
+            <p class="hero__text">Я из Санкт-Петербурга. Очень нравится вёрстка, люблю Java Script!</p>
+            <p class="hero__descr">С радостью вольюсь в команду веб-разработчиков!</p>
+            <ul class="hero__list-social social">
+              <li class="social__item">
+                <a class="social__link social__link--phone" href="tel:+79043356128">+7(904)335-61-28</a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--telegram" href="https://t.me/timofeev28">Telegram</a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--mail" href="mailto:timofeevdn28@mail.ru">timofeevdn28@mail.ru</a>
+              </li>
+            </ul>
+          </div>
+        </section>
 
+        <section class="about">
+          <div class="about__container container">
+            <h2 class="about__title title">Обо мне</h2>
+            <ul class="accordion" data-accordion="parent">
+              <li class="accordion__item is-active" data-accordion="element">
+                <button class="accordion__btn" type="button" data-accordion="button">Навыки</button>
+                <div class="accordion__descr" data-accordion="content">
+                  <ul class="accordion__list-text">
+                    <li class="accordion__item-text">HTML, CSS/SASS, Java Script <span class="accordion__span">(basic)</span></li>
+                    <li class="accordion__item-text">Вёрстка под CMS</li>
+                    <li class="accordion__item-text">Git, Figma, Twig</li>
+                    <li class="accordion__item-text">БЭМ, Адаптивность, Доступность</li>
+                    <li class="accordion__item-text">Pixel Perfect, Семантика</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="accordion__item" data-accordion="element">
+                <button class="accordion__btn" type="button" data-accordion="button">Образование</button>
+                <div class="accordion__descr" data-accordion="content">
+                  <ul class="accordion__list-text">
+                    <li class="accordion__item-text">МГОУ - высшее техническое (Промышленная теплоэнергетика)</li>
+                    <li class="accordion__item-text">Skillbox - базовая вёрстка</li>
+                    <li class="accordion__item-text">HTML-Academy - HTML и CSS. Профессиональная вёрстка сайтов</li>
+                    <li class="accordion__item-text">HTML-Academy - HTML и CSS. Адаптивная вёрстка и автоматизация</li>
+                    <li class="accordion__item-text">HTML-Academy - JavaScript. Профессиональная разработка веб-интерфейсов</li>
+                    <li class="accordion__item-text">HTML-Academy - Профессия Фронтенд-разработчик (в процессе завершения)</li>
+                    <li class="accordion__item-text">Курсы Д.Трепачёва - JavaScript (в настоящее время)</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="accordion__item ac"  data-accordion="element">
+                <button class="accordion__btn ac-trigger" type="button" data-accordion="button">Личные качества</button>
+                <div class="accordion__descr ac-panel" data-accordion="content">
+                  <ul class="accordion__list-text ac-text">
+                    <li class="accordion__item-text">Спокойствие и коммуникабельность</li>
+                    <li class="accordion__item-text">Внимательность и аккуратность</li>
+                    <li class="accordion__item-text">Умение работать в команде и находить со всеми общий язык</li>
+                    <li class="accordion__item-text">Большой интерес к веб-разработке</li>
+                    <li class="accordion__item-text">Открыт к дальнейшему обучению новому и нужному</li>
+                    <li class="accordion__item-text">Оптимизм и чувство юмора присутствуют</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
       </main>
       <footer>
         <div class="container"></div>

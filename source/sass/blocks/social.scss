@@ -1,0 +1,87 @@
+.social {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+
+  @include vp-1024 {
+    flex-direction: initial;
+    column-gap: 14px;
+  }
+
+  @include vp-1280 {
+    column-gap: 40px;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    padding-block: 5px;
+    padding-left: 36px;
+    width: fit-content;
+    font-size: 20px;
+    color: $color-second-text;
+    transition: outline $trans-default, color $trans-default;
+
+    @include vp-540 {
+      font-size: 19px;
+    }
+
+    @include vp-1024 {
+      font-size: 16px;
+    }
+
+    @include vp-1280 {
+      font-size: 18px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 32px;
+      background-color: $color-social;
+      mask: var(--bgi) no-repeat var(--bgp)/ var(--bgs);
+      transition: background-color $trans-default;
+    }
+
+    &--phone {
+      --bgi: url("../../img/stack-sprite.svg#phone");
+      --bgs: 20px 20px;
+      --bgp: center 30%;
+      font-size: 19px;
+    }
+
+    &--telegram {
+      --bgi: url("../../img/stack-sprite.svg#telegram");
+      --bgs: 29px 22px;
+      --bgp: center 40%;
+      text-transform: lowercase;
+    }
+
+    &--mail {
+      --bgi: url("../../img/stack-sprite.svg#mail");
+      --bgs: 18px 14px;
+      --bgp: center 50%;
+    }
+
+    @include focus {
+      outline: 2px solid $color-accent;
+      outline-offset: 3px;
+      border-radius: 1px;
+    }
+
+    @include hover {
+      color: $color-accent;
+
+      &::before {
+        background-color: $color-mark;
+      }
+    }
+
+    @include active {
+      color: $color-active;
+    }
+  }
+}

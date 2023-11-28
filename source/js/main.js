@@ -4,6 +4,9 @@ import {initBurger} from './modules/init/init-burger';
 import {initDropdown} from './modules/init/init-dropdown';
 import {initDropdownFooter} from './modules/init/init-dropdown-footer';
 import {initCertificatesSlider} from './modules/init/init-swiper-certificates';
+import {getNumber} from './modules/init/number-game';
+import {initTabs} from './modules/init/init-tabs-works';
+import {createGameCells} from './modules/init/cells-game';
 
 // ---------------------------------
 
@@ -25,6 +28,9 @@ window.addEventListener('DOMContentLoaded', () => {
     initDropdown();
     initDropdownFooter();
     initCertificatesSlider();
+    getNumber();
+    initTabs();
+    createGameCells();
   });
 });
 

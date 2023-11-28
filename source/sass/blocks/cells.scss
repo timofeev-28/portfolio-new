@@ -1,0 +1,214 @@
+.cells {
+  padding-top: 10px;
+  padding-bottom: 20px;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 28px;
+    text-align: center;
+
+    @include vp-768 {
+      margin-bottom: 14px;
+      font-size: 33px;
+    }
+
+    @include vp-1280 {
+      margin-bottom: 19px;
+      font-size: 35px;
+    }
+  }
+
+  &__descr {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 17px;
+
+    @include vp-768 {
+      margin-bottom: 19px;
+      font-size: 19px;
+    }
+
+    @include vp-1280 {
+      margin-bottom: 21px;
+      font-size: 21px;
+    }
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+
+    @include vp-540 {
+      grid-template-columns: 1fr 30%;
+      grid-template-rows: 15% 15%;
+    }
+
+    @include vp-768 {
+      grid-template-columns: 1fr 45%;
+      column-gap: 30px;
+    }
+
+    @include vp-1024 {
+      grid-template-columns: 1fr 55%;
+    }
+
+    @include vp-1280 {
+      grid-template-columns: 10% 1fr 45%;
+      column-gap: 30px;
+    }
+  }
+
+  &__table {
+    grid-column: 1 / -1;
+    margin-bottom: 10px;
+    padding: 2px;
+    border-radius: 3px;
+    border-spacing: 6px;
+    box-shadow: 0 0 2px 2px $color-bgc-text;
+
+    @include vp-540 {
+      grid-column: 1 / 2;
+      grid-row: 1 / 4;
+    }
+
+    @include vp-1280 {
+      grid-column: 2 / 3;
+    }
+  }
+
+  &__cell {
+    position: relative;
+    width: calc(10% - 2 * 3px - 9 * 6px);
+    border-radius: 2px;
+    transition: outline $trans-default;
+
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+      outline: 2px solid $color-cells-outline;
+      border-radius: 2px;
+      background-color: $color-bgc-cells;
+      transition: box-shadow $trans-default, background-color $trans-default;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 1px solid $color-accent;
+      outline-offset: 2px;
+      border-radius: 1px;
+    }
+
+    @include hover {
+      &:hover::before {
+        box-shadow: 0 0 5px 3px $color-social;
+      }
+    }
+
+    &:active::before {
+      box-shadow: 0 0 7px 4px $color-social;
+      background-color: $color-social;
+    }
+  }
+
+  &__selected.cells__cell::before {
+    background-color: $color-transparent;
+  }
+
+  &__hidden-cell {
+    background-color: $color-selected;
+  }
+
+  &__answer {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 22px;
+
+    @include vp-540 {
+      font-size: 20px;
+    }
+
+    @include vp-768 {
+      font-size: 24px;
+    }
+
+    @include vp-1280 {
+      font-size: 26px;
+    }
+  }
+
+  &__answer--attempt {
+    grid-column: 2 / 3;
+    justify-self: start;
+
+    @include vp-540 {
+      grid-column: 2 / 3;
+    }
+
+    @include vp-1280 {
+      grid-column: 3 / 4;
+    }
+  }
+
+  &__answer--cells {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    justify-self: end;
+
+    @include vp-540 {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      justify-self: initial;
+    }
+
+    @include vp-1280 {
+      grid-column: 3 / 4;
+    }
+  }
+
+  &__massage {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin: 0;
+    padding: 3px;
+    min-width: 230px;
+    min-height: 39px;
+    text-align: center;
+    color: $color-selected;
+    background: $lime-to-blue;
+    /* stylelint-disable-next-line property-no-vendor-prefix */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-shadow: 0 0 2px 2px $color-bgc-text;
+
+    @include vp-540 {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+      align-self: start;
+      justify-self: start;
+      min-width: 140px;
+      font-size: 19px;
+    }
+
+    @include vp-768 {
+      min-width: 240px;
+      font-size: 23px;
+    }
+
+    @include vp-1280 {
+      grid-column: 3 / 4;
+      min-width: 295px;
+      font-size: 26px;
+    }
+  }
+
+  &__count {
+    padding-inline: 6px;
+    color: $color-selected;
+  }
+}

@@ -17,6 +17,7 @@
   &__list {
     display: flex;
     gap: 12px;
+    flex-wrap: wrap;
     margin-top: 0;
     margin-bottom: 10px;
     padding-left: 0;

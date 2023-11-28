@@ -4,7 +4,7 @@
 @import "vendor/normalize";
 @import "vendor/data-accordion";
 // Swiper 8.4.7
-// @import "vendor/swiper";
+@import "vendor/swiper";
 
 // Global
 // ---------------------------------
@@ -29,6 +29,9 @@
 @import "blocks/social";
 @import "blocks/about";
 @import "blocks/accordion";
+@import "blocks/cert";
+@import "blocks/footer";
+@import "blocks/up";
 
 // ---------------------------------
 

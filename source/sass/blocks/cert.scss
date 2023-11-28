@@ -1,0 +1,107 @@
+.cert {
+  padding-top: 25px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid $color-border;
+
+  &__title {
+    margin-bottom: 23px;
+    text-align: center;
+  }
+
+  &__swiper-wrapper {
+    position: relative;
+    margin-inline: auto;
+    padding-top: 10px;
+    padding-inline: 10px;
+    padding-bottom: 62px;
+    width: 93%;
+    border-radius: 5px;
+    border: 1px solid $color-bgc-text;
+
+    @include vp-768 {
+      width: 85%;
+    }
+
+    @include vp-1024 {
+      padding-bottom: 70px;
+    }
+
+    @include vp-1280 {
+      padding-top: 15px;
+      padding-inline: 15px;
+      width: 80%;
+    }
+  }
+
+  &__slide {
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    background-color: $color-transparent;
+  }
+
+  &__img {
+    border-radius: 5px;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+  }
+
+  &__swiper-wrapper .swiper-scrollbar.swiper-scrollbar-horizontal {
+    top: auto;
+    bottom: 50px;
+    height: 1px;
+
+    @include vp-1024 {
+      bottom: 55px;
+    }
+  }
+
+  &__swiper-wrapper .swiper-scrollbar-drag {
+    background: $color-social;
+  }
+
+  &__button-nav {
+    top: auto;
+    bottom: 10px;
+    width: 70px;
+    height: 28px;
+    border-radius: 7px;
+    border: 1px solid $color-social;
+
+    @include vp-1024 {
+      bottom: 13px;
+      width: 80px;
+      height: 30px;
+    }
+  }
+
+  &__button-nav--prev {
+    left: 25%;
+
+    @include vp-540 {
+      left: 30%;
+    }
+
+    @include vp-1024 {
+      left: 35%;
+    }
+  }
+
+  &__button-nav--next {
+    right: 25%;
+
+    @include vp-540 {
+      right: 30%;
+    }
+
+    @include vp-1024 {
+      right: 35%;
+    }
+  }
+
+  &__button-nav::after {
+    font-size: 20px;
+    color: $color-social;
+  }
+}

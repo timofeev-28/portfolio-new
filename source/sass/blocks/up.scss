@@ -1,0 +1,37 @@
+.up {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: outline $trans-default;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $color-second-text;
+    mask: url("../../img/stack-sprite.svg#up-arrow") no-repeat center / 40px 40px;
+    transition: background-color $trans-default;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-accent;
+    outline-offset: 3px;
+  }
+
+  @include hover {
+    &:hover::before {
+      background-color: $color-accent;
+    }
+  }
+
+  &:active::before {
+    background-color: $color-active;
+  }
+}

@@ -26,7 +26,7 @@
             </picture>
           </a>
           <nav class="navigation" data-burger="nav">
-            <ul class="navigation__list list-reset">
+            <ul class="navigation__list">
               <li class="navigation__item navigation__item--current">
                 <a class="navigation__link navigation-js" href="index.html" data-burger="nav-js">Обо мне</a>
               </li>
@@ -34,7 +34,7 @@
                 <a class="navigation__link" href="./works-js.html" data-burger="nav-js">Разное на JS</a>
               </li>
             </ul>
-            <ul class="navigation__list list-reset">
+            <ul class="navigation__list">
               <li class="navigation__item">
                 <a class="navigation__link" href="javascript:undefined" data-dropdown="link-nav">Мои работы</a>
                 <ul class="navigation__list-works" data-dropdown="dropdown">
@@ -147,28 +147,179 @@
             </ul>
           </div>
         </section>
+        <section class="cert">
+          <div class="container cert__container">
+            <h2 class="cert__title title">Сертификаты об обучении</h2>
+            <div class="cert__swiper-wrapper">
+              <div class="cert__swiper swiper" data-swiper="certificates">
+                <div class="swiper-wrapper">
+                  <button class="cert__slide swiper-slide" type="button" data-open-modal="html-skillbox">
+                    <picture>
+                      <source type="image/webp" srcset="./img/html-skillbox-mobile@1x.webp 1x, ./img/html-skillbox-mobile@2x.webp 2x">
+                      <img class="cert__img" src="./img/html-skillbox-mobile@1x.jpg" srcset="./img/html-skillbox-mobile@2x.jpg 2x" width="129" height="181" alt="Сертификат Профессиональная вёрстка сайтов образовательной платформы Skillbox.">
+                    </picture>
+                  </button>
+                  <button class="cert__slide swiper-slide" type="button" data-open-modal="html-1">
+                    <picture>
+                      <source type="image/webp" srcset="./img/html-1-mobile@1x.webp 1x, ./img/html-1-mobile@2x.webp 2x">
+                      <img class="cert__img" src="./img/html-1-mobile@1x.jpg" srcset="./img/html-1-mobile@2x.jpg 2x" width="129" height="181" alt="Сертификат Профессиональная вёрстка сайтов образовательной платформы HTML-Академия.">
+                    </picture>
+                  </button>
+                  <button class="cert__slide swiper-slide" type="button" data-open-modal="html-2">
+                    <picture>
+                      <source type="image/webp" srcset="./img/html-2-mobile@1x.webp 1x, ./img/html-2-mobile@2x.webp 2x">
+                      <img class="cert__img" src="./img/html-2-mobile@1x.jpg" srcset="./img/html-2-mobile@2x.jpg 2x" width="129" height="181" alt="Сертификат Адаптивная вёрстка и автоматизация образовательной платформы HTML-Академия.">
+                    </picture>
+                  </button>
+                  <button class="cert__slide swiper-slide" type="button" data-open-modal="js-1">
+                    <picture>
+                      <source type="image/webp" srcset="./img/js-mobile@1x.webp 1x, ./img/js-mobile@2x.webp 2x">
+                      <img class="cert__img" src="./img/js-mobile@1x.jpg" srcset="./img/js-mobile@2x.jpg 2x" width="129" height="181" alt="Сертификат Java Script Професиональная разработка веб-интерфейсов образовательной платформы HTML-Академия.">
+                    </picture>
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-scrollbar"></div>
+              <div class="cert__button-nav cert__button-nav--prev swiper-button-prev" data-button="certificates-prev"></div>
+              <div class="cert__button-nav cert__button-nav--next swiper-button-next" data-button="certificates-next"></div>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer>
-        <div class="container"></div>
+
+      <footer class="footer footer-container container">
+        <a class="up footer__up" href="#header" aria-label="Наверх к началу страницы"></a>
+        <a class="footer__logo-link logo" href="./index.html">
+          <picture>
+            <source type="image/webp" srcset="./img/logo-mobile@1x.webp 1x, ./img/logo-mobile@2x.webp 2x">
+            <img class="logo__img" src="./img/logo-mobile@1x.png" srcset="./img/logo-mobile@2x.png 2x" width="365" height="36" alt="Логотип - слово Портфолио">
+          </picture>
+        </a>
+        <nav class="footer__navigation navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item navigation__item--current">
+              <a class="navigation__link navigation-js" href="index.html">Обо мне</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="./works-js.html">Разное на JS</a>
+            </li>
+          </ul>
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="javascript:undefined" data-dropdown="link-nav">Мои работы</a>
+              <ul class="navigation__list-works" data-dropdown="dropdown">
+                <li class="navigation__item-works">
+                  <a class="navigation__link navigation-js navigation__link--works" href="https://supergym.timofeev-28.ru" target="_blank" data-dropdown="dropdown-link">Supergym</a>
+                </li>
+                <li class="navigation__item-works">
+                  <a class="navigation__link navigation-js navigation__link--works" href="https://mishka.timofeev-28.ru" target="_blank" data-dropdown="dropdown-link">Mishka</a>
+                </li>
+                <li class="navigation__item-works">
+                  <a class="navigation__link navigation-js navigation__link--works" href="https://blanchard.timofeev-28.ru" target="_blank" data-dropdown="dropdown-link">Blanchard</a>
+                </li>
+                <li class="navigation__item-works">
+                  <a class="navigation__link navigation-js navigation__link--works" href="https://drink2go.timofeev-28.ru" target="_blank" data-dropdown="dropdown-link">Drink2Go</a>
+                </li>
+                <li class="navigation__item-works">
+                  <a class="navigation__link navigation-js navigation__link--works" href="https://evclid.timofeev-28.ru" target="_blank" data-dropdown="dropdown-link">Evclid</a>
+                </li>
+              </ul>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link navigation-js navigation__link--gh" href="https://github.com/timofeev-28" target="_blank" aria-label="Мой профиль на Гитхабе"></a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="footer__list-social social list-reset">
+          <li class="social__item">
+            <a class="social__link social__link--phone" href="tel:+79043356128">+7(904)335-61-28</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--telegram" href="https://t.me/timofeev28">Telegram</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--mail" href="mailto:timofeevdn28@mail.ru">timofeevdn28@mail.ru</a>
+          </li>
+        </ul>
+        <p class="footer__text">
+          Всё, что вы здесь видите, сделано осознанно и с пониманием того, что я делаю...
+        </p>
+        <p class="footer__copyright">
+          &#9786; Дизайн мой, 2023
+        </p>
       </footer>
     </div>
 
-    <!-- Модалки -->
-    <!-- <div class="modal modal--preload" data-modal="feedback">
+    <!-- МОДАЛКИ СЛАЙДЕРА (сертификаты) -->
+    <div class="modal modal--preload" data-modal="html-skillbox">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
+          <picture>
+            <source type="image/webp" srcset="./img/html-skillbox-mobile@1x.webp 1x, ./img/html-skillbox-mobile@2x.webp 2x">
+            <img src="./img/html-skillbox-mobile@1x.jpg" srcset="./img/html-skillbox-mobile@2x.jpg 2x" width="129" height="181" alt="Сертификат Профессиональная вёрстка сайтов образовательной платформы Skillbox.">
+          </picture>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="30" height="30">
+              <use href="./img/stack-sprite.svg#icon-close"></use>
             </svg>
           </button>
         </div>
       </div>
     </div>
 
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
+    <div class="modal modal--preload" data-modal="html-1">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <picture>
+            <source type="image/webp" srcset="./img/html-1-mobile@1x.webp 1x, ./img/html-1-mobile@2x.webp 2x">
+            <img src="./img/html-1-mobile@1x.jpg" srcset="./img/html-1-mobile@2x.jpg 2x" width="129" height="181" alt="Сертификат Профессиональная вёрстка сайтов образовательной платформы HTML-Академия.">
+          </picture>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="30" height="30">
+              <use href="./img/stack-sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal--preload" data-modal="html-2">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <picture>
+            <source type="image/webp" srcset="./img/html-2-mobile@1x.webp 1x, ./img/html-2-mobile@2x.webp 2x">
+            <img src="./img/html-2-mobile@1x.jpg" srcset="./img/html-2-mobile@2x.jpg 2x" width="129" height="181" alt="Сертификат Адаптивная вёрстка и автоматизация образовательной платформы HTML-Академия.">
+          </picture>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="35" height="35">
+              <use href="./img/stack-sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal--preload" data-modal="js-1">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <picture>
+            <source type="image/webp" srcset="./img/js-mobile@1x.webp 1x, ./img/js-mobile@2x.webp 2x">
+            <img src="./img/js-mobile@1x.jpg" srcset="./img/js-mobile@2x.jpg 2x" width="129" height="181" alt="Сертификат Java Script Професиональная разработка веб-интерфейсов образовательной платформы HTML-Академия.">
+          </picture>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="35" height="35">
+              <use href="./img/stack-sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">

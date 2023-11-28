@@ -6,7 +6,7 @@ const menuLinks = document.querySelectorAll('[data-burger="nav-js"]');
 const burgerRemoveActive = () => {
   burger.classList.remove('burger--active');
   navigation.classList.remove('navigation--active');
-  document.body.classList.remove('stop-scroll');
+  document.body.classList.remove('scroll-lock');
   document.removeEventListener('click', documentClickHendler);
   closeBurgerLinksRemove();
 };
@@ -40,7 +40,7 @@ function closeBurgerLinksRemove() {
 const burgerClickHandler = () => {
   burger.classList.toggle('burger--active');
   navigation.classList.toggle('navigation--active');
-  document.body.classList.toggle('stop-scroll');
+  document.body.classList.toggle('scroll-lock');
 
   if (burger.closest('.burger--active')) {
     document.addEventListener('click', documentClickHendler);

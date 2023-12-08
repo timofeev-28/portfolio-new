@@ -1,9 +1,11 @@
+import Swiper from '../../vendor/swiper';
+
 const sliderCertificates = document.querySelector('[data-swiper="certificates"]');
 const buttonNext = document.querySelector('[data-button="certificates-next"]');
 const buttonPrev = document.querySelector('[data-button="certificates-prev"]');
 
 const setSlider = () => {
-  return new window.Swiper(sliderCertificates, {
+  const swiperSertificates = new Swiper(sliderCertificates, {
     slidesPerView: 2,
     spaceBetween: 10,
     slidesPerGroup: 2,
@@ -28,6 +30,8 @@ const setSlider = () => {
       prevEl: buttonPrev,
     },
   });
+
+  return swiperSertificates;
 };
 
 const initCertificatesSlider = () => {

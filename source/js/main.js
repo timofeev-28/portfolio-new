@@ -7,6 +7,7 @@ import {initCertificatesSlider} from './modules/init/init-swiper-certificates';
 import {getNumber} from './modules/init/number-game';
 import {initTabs} from './modules/init/init-tabs-works';
 import {createGameCells} from './modules/init/cells-game';
+import {letIsSnow} from './modules/init/init-snow';
 
 // ---------------------------------
 
@@ -23,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
+    letIsSnow();
     initModals();
     initBurger();
     initDropdown();
